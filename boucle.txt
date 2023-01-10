@@ -78,6 +78,8 @@ fin pour
 fin
 
 exercice 4
+// ecrire un algorithme qui demande un  nombre de depart et qui suis la table de multiplication
+
 var nb entier
 
 debut
@@ -89,4 +91,21 @@ for (i=1;i<-10;i++)
  ecrire nb "x" i "=" nb*i
 fin pour 
 fin
- 
+
+exercice 5
+// calcule la somme des entiers jusqu'à ce nombre
+
+var nb, somme, i entier
+
+debut
+somme<-0
+ecrire "donnez nb" 
+lire nb
+
+pour (i<-1; i<-nb)
+ somme<-somme+i
+ i++
+ ecrire somme
+fin pour
+
+fin
