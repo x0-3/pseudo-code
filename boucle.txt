@@ -1,0 +1,92 @@
+						Algorithme-Boucle
+
+exercice1
+// ecrire un algorithme qui demande à l'utilisateur  un nombre commpris entre 1 et 3 jusqu'à ce que la réponse convienne
+
+var nb en entier
+
+Debut
+nb<-0
+ecrire "choisir un nombre"
+
+tant que nb <1 ou nb>3
+ lire nb
+ 
+ si nb>1 et nb<3 alors
+  ecrire "Bravo"
+ finsi
+
+fin tant que
+fin 
+
+// variante erreur //
+
+var nb en entier
+
+Debut
+nb<-0
+ecrire "choisir un nombre"
+
+tant que nb <1 ou nb>3
+ lire nb
+ 
+ si nb<1 et nb>3 alors
+  ecrire "erreur"
+ finsi
+
+fin tant que
+fin 
+
+
+
+exercice 2 
+// ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu'àce que la réponse convienne.
+// En cas de réponse supérieur à 20, on fera apparaitre un message et inverssement
+
+var nb en entier
+
+Début
+nb<-0
+ecrire "choissir un nombre"
+
+tant que nb<=10 ou nb>=20
+ lire nb
+
+ si nb <10 alors
+  ecrire"Plus grand"
+ sinon si nb>20 alors
+  ecrire"plus petit"
+ fin sinon si
+ fin si
+
+fin tant que
+fin
+
+exercice 3 
+// ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivant
+
+var nb en entier
+
+Début
+ecrire "ecrire un nombre"
+Lire nb
+
+Pour (i<-1;i<-10;i++) alors
+ ecrire nb+i;
+fin pour
+
+fin
+
+exercice 4
+var nb entier
+
+debut
+ecrit "donne nb"
+lire nb
+ecrire "table de "nb
+
+for (i=1;i<-10;i++)
+ ecrire nb "x" i "=" nb*i
+fin pour 
+fin
+ 

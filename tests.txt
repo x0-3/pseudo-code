@@ -1,4 +1,4 @@
-Algorithme - test
+       						Algorithme - test
 
 exercice1
 //ecrire un algorithme qui demande un nombre à l'utilisateur, et l'informe ensuite si ce nombre est positif ou négatif (on laisse de côté le cas où le nombre vaut zéro)
@@ -9,9 +9,9 @@ Début
 écrire "Donnez moi un nombre"
 Lire nb1
 si (nb1>0) alors
-ecrire "le nombre est positif
+ ecrire "le nombre est positif
 sinon
-ecrire "le nombre est négatif"
+ ecrire "le nombre est négatif"
 finsi
 fin
 
@@ -26,9 +26,9 @@ Lire nb1
 écrire "Donnez moi nb2 nombres"
 Lire nb2
 si (nb1>0 et nb2>0) ou (nb1<0 et nb2<0) alors
-écrire "le produit est positif"
+ écrire "le produit est positif"
 sinon
-ecrire "le produit est négatif"
+ ecrire "le produit est négatif"
 finsi
 fin
 
@@ -45,9 +45,9 @@ Lire nom2
 écrire" donnez moi un nom"
 Lire nom3
 si (nom1<nom2) et (nom2<nom3) alors
-écrire "c'est dans l'ordre alphabétique"
+ écrire "c'est dans l'ordre alphabétique"
 sinon
-ecrire"pas dans l'ordre alphabetique"
+ ecrire"pas dans l'ordre alphabetique"
 finsi
 fin
 
@@ -62,10 +62,37 @@ lire nb1
 ecrire"donnez moi un nombre"
 lire nb2
 si (nb1>0 et nb2>0) ou (nb1<0 et nb2<0)
-ecrire "le produit est positif"
+ ecrire "le produit est positif"
 sinon si (nb1=0 ou nb2=0)
-ecrire "nombre nul"
+ ecrire "nombre nul"
 sinon 
-ecrire "le produit négatif"
+ ecrire "le produit négatif"
 finsi
 fin
+
+exercice 6
+var age entier
+
+Début
+ecrire "Donnez age"
+Lire age
+si age >=12 alors
+ ecrire "Cadet"
+sinon si age >= 10 alors
+ ecrire "minime"
+sinon si age >= 8 alors
+ ecrire "Pupille"
+sinon si age >= 6 alors
+ ecrire "Poussin"
+sinon 
+ ecrire "Trop jeune"
+finsi
+fin
+
+
+
+
+
+
+
+
