@@ -1,7 +1,8 @@
 						Algorithme-Boucle
 
 exercice1
-// ecrire un algorithme qui demande à l'utilisateur  un nombre commpris entre 1 et 3 jusqu'à ce que la réponse convienne
+// ecrire un algorithme qui demande à l'utilisateur  un nombre commpris entre 1 et 3 jusqu'à ce 
+// que la réponse convienne
 
 var nb en entier
 
@@ -10,12 +11,11 @@ nb<-0
 ecrire "choisir un nombre"
 
 tant que nb <1 ou nb>3
- lire nb
+    lire nb
  
- si nb>1 et nb<3 alors
-  ecrire "Bravo"
- finsi
-
+    si nb>1 et nb<3 alors
+        ecrire "Bravo"
+    finsi
 fin tant que
 fin 
 
@@ -28,12 +28,11 @@ nb<-0
 ecrire "choisir un nombre"
 
 tant que nb <1 ou nb>3
- lire nb
+    lire nb
  
- si nb<1 et nb>3 alors
-  ecrire "erreur"
- finsi
-
+    si nb<1 et nb>3 alors
+        ecrire "erreur"
+    finsi
 fin tant que
 fin 
 
@@ -50,20 +49,20 @@ nb<-0
 ecrire "choissir un nombre"
 
 tant que nb<=10 ou nb>=20
- lire nb
+    lire nb
 
- si nb <10 alors
-  ecrire"Plus grand"
- sinon si nb>20 alors
-  ecrire"plus petit"
- fin sinon si
- fin si
-
+    si nb <10 alors
+        ecrire"Plus grand"
+    sinon si nb>20 alors
+        ecrire"plus petit"
+    fin sinon si
+    fin si
 fin tant que
 fin
 
 exercice 3 
-// ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivant
+// ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres 
+// suivant
 
 var nb en entier
 
@@ -72,7 +71,7 @@ ecrire "ecrire un nombre"
 Lire nb
 
 Pour (i<-1;i<-10;i++) alors
- ecrire nb+i;
+    ecrire nb+i;
 fin pour
 
 fin
@@ -88,7 +87,7 @@ lire nb
 ecrire "table de "nb
 
 for (i=1;i<-10;i++)
- ecrire nb "x" i "=" nb*i
+    ecrire nb "x" i "=" nb*i
 fin pour 
 fin
 
@@ -103,9 +102,107 @@ ecrire "donnez nb"
 lire nb
 
 pour (i<-1; i<-nb)
- somme<-somme+i
- i++
- ecrire somme
+    somme<-somme+i
+    i++
+    ecrire somme
 fin pour
+fin
 
+exercice 6  
+//Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+
+var nb, resultat,i entier
+
+Début
+ecrire"Donnez nb"
+lire nb
+resultat<-1
+
+Pour (i=1;i<-nb;i++)
+    resultat<-resultat*i
+fin pour
+ecrire "la factorielle de nb est : "resultat
+
+fin
+
+exercice 7
+// ecrire un algorithme qui demande successivement 20 nombre à l'utillisateur, et qui lui dise 
+// ensuite quel était le plus grand parmit ces 20 nombre
+
+var nb,max,i, position en entier
+
+Début
+max<-0
+position<-0
+Pour (i<-1;i<-20;i++) alors
+    ecrire "Donnez moi un nombre" i
+    Lire nb
+
+    si(nb>max) alors
+        max<-nb
+        position<-i
+    finsi
+fin pour
+ecrire "c'était le numéro" max
+fin
+
+exercice 8
+// Réécrire l'algorithme précédent, mais cette fois-ci on ne conaît pas d'avnce combien l'utilisateur 
+// souhaite saisir de nombres. La saisie des nombres s'arrête lorsque l'utilisateur entre 0.
+
+var nb,max,position,i en entier
+
+Début
+max<-0
+nb<-1
+i<-0
+tant que (nb!=0) alors  
+    i<-i+1
+    ecrire "Donnez moi un nombre"
+    lire nb
+
+    si (nb>max) alors
+        max<-nb
+        pos<-i
+    finsi
+fin tant que
+ecrire "c'était le numéro" max
+fin
+
+exercice 9
+// Lire la suite des prix des achat d'un client. Calculer la somme qu'il doit, lire la somme qui paye,
+// et simuler la remise de la monnaie en  affichant les textes "10 Euros","5 Euros" et "1 Euros autant 
+// de fois qu'il ya de coupures de chaque sorte à rendre.
+
+var prixArt,prixTotal ,montantPayer,rendu, nb10,nb5,nb1 en entier
+
+Début
+prixArt<-1
+prixTotal<-0
+nb10<-0
+nb5<-0
+
+tant que (prixArt!=0)
+    ecrire"scannez article"
+    Lire prixArt
+    prixTotal+=prixArt
+fin tant que
+
+ecrire "vous devez la somme de " prixTotal
+ecrire"reglement"
+Lire montantPayer
+rendu<- montantPayer - prixTotal
+
+tant que (rendu >=10)
+    rendu=10
+    nb10<-nb10++
+fin tant que
+
+si rendu >= 5 alors
+    rendu-=5
+    nb5++
+finsi
+ecrire" je vous est rendu" nb10 "billet de 10 €"
+ecrire" je vous est rendu" nb5 "billet de 10 €"
+ecrire" je vous est rendu" "piece de 1€"
 fin
