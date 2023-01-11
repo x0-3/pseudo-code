@@ -1,0 +1,34 @@
+var remise, fraisLivraison, montantHT, montantTVA,
+montantTTC, netAPayer, quantiter, prixUnitaire 
+
+Début
+
+quantiter = 0
+prixUnitaire = 0
+remise = 10%
+montantTVA = 19.6%
+montantHT = quantiter * prixUnitaire
+montantTTC = montantTVA * montantHT
+
+if code 4 = true then
+    fraisLivraison = 0
+    netAPayer = montantTTC + fraisLivraison
+
+else if code 3 = true then
+    fraisLivraison = 30
+    netAPayer = montantTTC + fraisLivraison
+
+else if code 4 = true then
+    fraisLivraison = 20 
+    netAPayer = montantTTC + fraisLivraison
+
+else code 1 = 10
+    fraisLivraison = 10
+    netAPayer = montantTTC + fraisLivraison
+
+fin si
+
+ecrire "taux de remise est de: " remise 
+ecrire "taux de TVA est de: " montantTVA 
+ecrire "les frais de livraison sont de : " fraisLivraison
+ecrire "le prix net a payer est de : "netAPayer 

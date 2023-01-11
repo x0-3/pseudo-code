@@ -1,0 +1,19 @@
+var salaire, primeTransport, CA , primeCA, salaireBase en entier
+
+Début
+primeTransport = 0.26
+CA = 0
+salaireBase = 0
+ecrire "votre salaire de base est de : "salaireBase
+
+
+si CA> 50 000 alors
+    primeCA = 4%
+    salaire = primeTransport + primeCA
+else
+    primeCA = 2%
+    salaire = primeTransport + primeCA
+finsi
+ecrire "votre salaire est de : " salaire
+fin
+
