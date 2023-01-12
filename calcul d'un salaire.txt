@@ -1,19 +1,38 @@
-var salaire, primeTransport, CA , primeCA, salaireBase en entier
+var primeTransport en decimale
+var CA en entier
+var primeCA en decimale
+var salaireBase en entier
+var prime en entier
+var salaireTotal en entier
+var km en numerique
 
 Début
 primeTransport = 0.26
-CA = 0
-salaireBase = 0
-ecrire "votre salaire de base est de : "salaireBase
+ecrire "km parcouru :" 
+lire km
+
+primeTransport <- primeTransport * km
+ecrire "votre prime transport est de :"primeTransport 
+
+ecrire "votre salaire de base est de : "salaireBase "€"
+Lire salaireBase
+
+ecrire "votre CA est de : " CA "€"
+Lire CA
 
 
 si CA> 50 000 alors
-    primeCA = 4%
-    salaire = primeTransport + primeCA
-else
-    primeCA = 2%
-    salaire = primeTransport + primeCA
+    primeCA = 0.04
+    prime = CA * primeCA
+    salaireTotal = salaireBase + prime
+sinon
+    primeCA = 0.02 
+    prime = CA * primeCA
+    salaireTotal = salaireBase + prime
 finsi
-ecrire "votre salaire est de : " salaire
+
+salaireTotal <- salaireTotal + primeTransport + prime
+ecrire "votre salaire est de : " salaireTotal "€"
+
 fin
 
