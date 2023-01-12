@@ -1,0 +1,122 @@
+exercice 1
+
+variables:
+
+Tableau tab[6] en entier     
+var i en entier 
+
+Debut
+
+pour (i<-0 a 6)
+    tab[i] <- 0
+i++
+Fin
+
+
+exercice 2
+
+variables:
+
+Tableau voyelles[5] en string
+var i en entier
+
+pour i <- 0; i<-5
+    voyelles[i] <- A
+i++
+fin
+
+
+exercice 3
+
+variables :
+
+Tableau notes[8] en entier
+var i en entier
+
+pour i<-0, i<-8, 
+    ecrire "donnez moi une note"
+    Lire note[i]
+i++
+fin
+
+
+exercice 4
+
+il multiplie les valeurs présente dans le tableau entre elles
+en affectant la valeur precedament multiplier par la nouvelle 
+valeur présente dans le tableau jusqu'a qu'il arrive a 
+l'index 5. Il ecrit ensuite le resultat de chaque calcule
+
+
+Tableau Nb[5] en entier
+variable i en entier
+
+Debut
+
+pour i<-0 à 5
+    Nb[i]<-i*i
+    ecrire Nb[i]
+i++
+
+fin
+
+exercice 5
+
+detailler:
+on affecte la valeur de 1 pour la premiere valeur du tableau
+
+on commence par la 2e valeur dans la boucle for 
+
+dans une boucle for on utilise une variable k pour 
+l'ingrémenter et parcourir le tableau
+
+on soustrait 1 a la valeur présente dans le tableau puis on 
+y rajoute 2 avant de l'affecter a la valeur dans le tableau
+
+et la boucle recommence jusqu'a qu'elle arrive a la derniere 
+valeur du tableau
+
+dans une nouvelle boucle on utilise une variable i qui nous 
+permettra d'ecrire toutes les valeurs du tableau 
+
+resumé :
+algorithme declare un tableau de 7 nombres 
+le premier nombre est egale a 1
+on calcule la somme d'une autres valeurs du tableau par 2 
+avant de l'affecter au nombre choisit
+puis on affiche les nombres
+
+
+
+exercice 6
+
+algorithme déclare un tableau de 8 suite
+qui calcule la somme de plusieurs nombres entre elles sauf
+les deux premiere et elle affiche le resultat
+
+
+exercice 7
+
+variables :
+
+Tableau notes[8] en entier
+var i, moyenne en entier
+
+pour i<-0, i<-8, 
+    ecrire "donnez moi une note"
+    Lire note[i]
+    moyenne <- note[] / i 
+i++
+
+ecrire "la moyenne est de " moyenne
+fin
+
+
+exercice 8
+
+var Tableau[] en numerique 
+var nombre en numerique
+
+tant que () alors
+    ecrire "donnez moi un nombre"
+    Lire nombre
