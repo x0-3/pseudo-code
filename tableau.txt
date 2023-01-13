@@ -20,9 +20,13 @@ variables:
 Tableau voyelles[5] en string
 var i en entier
 
-pour i <- 0; i<-5
-    voyelles[i] <- A
-i++
+Debut
+voyelles[0] <- "A"
+voyelles[1] <- "Z"
+voyelles[2] <- "D"
+voyelles[3] <- "F"
+voyelles[4] <- "V"
+voyelles[5] <- "W"
 fin
 
 
@@ -42,10 +46,7 @@ fin
 
 exercice 4
 
-il multiplie les valeurs présente dans le tableau entre elles
-en affectant la valeur precedament multiplier par la nouvelle 
-valeur présente dans le tableau jusqu'a qu'il arrive a 
-l'index 5. Il ecrit ensuite le resultat de chaque calcule
+[0, 1, 4, 9, 16, 25]
 
 
 Tableau Nb[5] en entier
@@ -62,61 +63,239 @@ fin
 
 exercice 5
 
-detailler:
-on affecte la valeur de 1 pour la premiere valeur du tableau
+[1, 3, 5, 7, 9, 11, 13]
 
-on commence par la 2e valeur dans la boucle for 
+tableau N[6] en entier
+variable k en entier
 
-dans une boucle for on utilise une variable k pour 
-l'ingrémenter et parcourir le tableau
+Debut
 
-on soustrait 1 a la valeur présente dans le tableau puis on 
-y rajoute 2 avant de l'affecter a la valeur dans le tableau
-
-et la boucle recommence jusqu'a qu'elle arrive a la derniere 
-valeur du tableau
-
-dans une nouvelle boucle on utilise une variable i qui nous 
-permettra d'ecrire toutes les valeurs du tableau 
-
-resumé :
-algorithme declare un tableau de 7 nombres 
-le premier nombre est egale a 1
-on calcule la somme d'une autres valeurs du tableau par 2 
-avant de l'affecter au nombre choisit
-puis on affiche les nombres
-
-
+N[0] <- 1
+ecrire N[0]
+pour k <- 1 a 6
+    N[k] <- N[k-1] + 2
+    ecrire N[k]
+k++
+fin
 
 exercice 6
 
-algorithme déclare un tableau de 8 suite
-qui calcule la somme de plusieurs nombres entre elles sauf
-les deux premiere et elle affiche le resultat
+[1, 1, 2, 3, 5, 8, 13, 21]
 
 
 exercice 7
 
-variables :
 
 Tableau notes[8] en entier
-var i, moyenne en entier
+var i en entier
+var somme en entier
+
+Debut
+somme <- 0
 
 pour i<-0, i<-8, 
     ecrire "donnez moi une note"
     Lire note[i]
-    moyenne <- note[] / i 
+    somme <- somme + notes[i]
 i++
 
-ecrire "la moyenne est de " moyenne
+ecrire "la moyenne est de " somme / 9
 fin
 
 
 exercice 8
 
-var Tableau[] en numerique 
-var nombre en numerique
+Tableau nombres[] en numerique 
+var valeur en numerique
+var i en entier
+var positif en entier
+var negatif en entier
 
-tant que () alors
+debut
+
+ecrire "donnez moi un nombre"
+Lire valeur
+
+positif <- 0
+negatif <- 0
+
+pour (i<- 0 a (valeur-1))
     ecrire "donnez moi un nombre"
-    Lire nombre
+    nombres[i]
+
+    si nombres[i]>0 alors 
+        positif++
+    sinon Si nombres[i] < 0
+        negatif++
+    fin si
+i++
+
+ecrire "il ya" positif "nombre positif et" negatif "nombre negatifs et il ya " valeur "nombre dans le tableau"
+fin
+
+
+exercice 9
+
+Tableau nombres[] en entier 
+var valeur en entier
+var i en entier
+var somme en entier
+
+debut
+
+ecrire "donnez moi un nombre"
+Lire valeur
+
+redim nombres[valeur-1]
+
+somme <-0
+pour (i<- 0 a (valeur-1))
+    somme<- somme + nombres[i]
+i++
+
+ecrire "la somme est de :" somme 
+fin
+
+
+exercice 10
+
+tableaux tab1[], tab2[], tab3[] en entier
+variable valeur en entier 
+variable i en entier 
+
+Debut
+
+...
+redim  tab1[valeur - 1]
+redim  tab2[valeur - 1]
+redim  tab3[valeur - 1]
+
+Pour i<-0 a valeur-1
+
+    tab3[i]<- tab1[i] + tab2[i]
+i++
+
+Fin
+
+
+exercice 11
+
+tableaux tab1[], tab2[] en numerique
+var valeur1 en entier
+var valeur2 en entier
+var somme en entier
+var i, j en entier
+
+Debut
+ecrire "donnez un nombre de valeur pour le tableau 1"
+Lire valeur1
+
+ecrire "donnez un nombre de valeur pour le tableau 2"
+Lire valeur2
+
+redim tab1[valeur1 - 1]
+redim tab2[valeur2 - 1]
+
+somme<- 0
+
+Pour i<- 0 a valeur1 - 1
+    Pour j<- 0 a valeur2 - 1
+        somme<- somme +  tab1[i] * tab2[j]
+    j++
+i++
+Fin
+
+
+exercice 12
+
+Tableau nombres[] en numerique 
+var valeur en numerique
+var i en entier
+
+debut
+
+ecrire "donnez moi un nombre"
+Lire valeur
+
+redim nombres[valeur-1]
+pour (i<- 0 a (valeur-1))
+    ecrire "donnez moi un nombre"
+    lire nombres[i]
+i++
+
+Pour (i<- 0 a (valeur-1))
+
+    nombres[i] <- nombres[i] + 1
+    ecrire nombres[i]
+i++
+fin
+
+
+exercice 13
+
+tableau nombres[] en entier
+var valeur en entier
+var i en entier
+var valeurMax en entier
+var position en entier
+
+debut
+
+ecrire "donnez nombre"
+lire valeur 
+
+valeurMax<- 0
+position<- 0
+
+redim nombres[valeur-1]
+Pour (i<-0 a (valeur-1))
+    ecrire "donnez nombre"
+    lire nombres[i]
+    
+    si nombres[i]> valeurMax alors
+        valeurMax<- nombres[i]
+        position<-i
+    fin si
+
+i++
+
+ecrire "la valeur la plus grande est de :" valeurMax "de la position" position
+fin
+
+
+exercice 14
+
+variable valeur, somme, moyenne, notesSupMoyenne en numerique
+tableau notes [] en numerique
+
+Debut
+
+ecrire "donne un nombre"
+lire valeur
+
+redim notes[valeur - 1]
+
+Pour i<-0 a (valeur - 1)
+
+    ecrire "donnez une note"
+    lire note[i]
+
+i++
+somme <- 0
+
+Pour i<- 0 a (valeur - 1)
+    somme<- some + notes[i]
+i++
+
+moyenne<- somme / valeur
+
+notesSupMoyenne<- 0
+
+Pour i<- 0 a [valeur - 1]
+    si note[i] > moyenne alors
+        notesSupMoyenne++
+    fin si
+i++
+
+ecrire "il y a" notesSupMoyenne "notes supérieur a" moyenne
+fin
